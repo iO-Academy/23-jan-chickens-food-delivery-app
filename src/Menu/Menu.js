@@ -1,5 +1,4 @@
 import './Menu.scss'
-import { useState } from 'react'
 
 const Menu = (props) => {
     return (

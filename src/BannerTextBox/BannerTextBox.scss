@@ -1,0 +1,19 @@
+.bannerTextSplashPage {
+    &.listRestaurants {
+        display: block;
+    }
+
+    &.menuRestaurant {
+        display: none;
+    }    
+}
+
+.bannerTextRestaurantName {
+    &.listRestaurants {
+        display: none;
+    }
+
+    &.menuRestaurant {
+        display: block;
+    }    
+}

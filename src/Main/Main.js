@@ -1,6 +1,8 @@
 import { useState } from 'react'
-import Restaurants from '../Restaurants/Restaurants'
+import BannerTextBox from '../BannerTextBox/BannerTextBox'
 import Menu from '../Menu/Menu'
+import Restaurants from '../Restaurants/Restaurants'
+
 
 const Main = (props) => {
 
@@ -8,8 +10,10 @@ const Main = (props) => {
 
     return (
         <div>
+            
             <Restaurants restaurantDetails={restaurantDetails} setRestaurantDetails={setRestaurantDetails} 
                 page={props.page} setPage={props.setPage} />
+            <BannerTextBox page={props.page} setPage={props.setPage} restaurantDetails={restaurantDetails}/>
             <Menu page={props.page} setPage={props.setPage} />
         </div>
     )
