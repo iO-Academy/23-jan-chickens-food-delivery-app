@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import BannerTextBox from '../BannerTextBox/BannerTextBox'
+import Title from '../Title/Title'
 import Menu from '../Menu/Menu'
 import Restaurants from '../Restaurants/Restaurants'
 
@@ -10,11 +10,13 @@ const Main = (props) => {
 
     return (
         <div>
-            
-            <Restaurants restaurantDetails={restaurantDetails} setRestaurantDetails={setRestaurantDetails} 
-                page={props.page} setPage={props.setPage} />
-            <BannerTextBox page={props.page} setPage={props.setPage} restaurantDetails={restaurantDetails}/>
-            <Menu page={props.page} setPage={props.setPage} />
+            <Title displayRestaurantsOrMenu={props.displayRestaurantsOrMenu}
+                setDisplayRestaurantsOrMenu={props.setDisplayRestaurantsOrMenu} restaurantDetails={restaurantDetails} />
+            <Restaurants restaurantDetails={props.restaurantDetails} setRestaurantDetails={setRestaurantDetails}
+                displayRestaurantsOrMenu={props.displayRestaurantsOrMenu}
+                setDisplayRestaurantsOrMenu={props.setDisplayRestaurantsOrMenu} />  
+            <Menu displayRestaurantsOrMenu={props.displayRestaurantsOrMenu}
+                setDisplayRestaurantsOrMenu={props.setDisplayRestaurantsOrMenu} />
         </div>
     )
 }

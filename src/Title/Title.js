@@ -1,11 +1,9 @@
 import { useEffect, useState } from 'react'
-import './BannerTextBox.scss'
+import './Title.scss'
 
-const BannerTextBox = (props) => {
+const Title = (props) => {
 
     const [restaurantName, setRestaurantName] = useState(null)
-
-
 
 
     useEffect(() => {
@@ -17,11 +15,11 @@ const BannerTextBox = (props) => {
 
     return (
         <div>
-            <p className={`bannerTextSplashPage ${props.page}`}>BannerTextBox placeholder</p>
-            <p className={`bannerTextRestaurantName ${props.page}`}>{restaurantName ?? ''}</p>
+            <p className={`titleSplashPage ${props.displayRestaurantsOrMenu}`}>Title placeholder</p>
+            <p className={`titleRestaurantName ${props.displayRestaurantsOrMenu}`}>{restaurantName ?? ''}</p>
 
         </div>
     )
 }
 
-export default BannerTextBox 
+export default Title 

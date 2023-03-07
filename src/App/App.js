@@ -4,11 +4,13 @@ import Navbar from '../Navbar/Navbar'
 import {useState} from 'react'
 
 function App() {
-  const [page, setPage] = useState('listRestaurants')
+  const [displayRestaurantsOrMenu, setDisplayRestaurantsOrMenu] = useState('listRestaurants')
   return (
     <div className="App">
-      <Navbar page={page} setPage={setPage} /> 
-      <Main page={page} setPage={setPage}/>
+      <Navbar displayRestaurantsOrMenu={displayRestaurantsOrMenu} 
+        setDisplayRestaurantsOrMenu={setDisplayRestaurantsOrMenu} /> 
+      <Main displayRestaurantsOrMenu={displayRestaurantsOrMenu} 
+        setDisplayRestaurantsOrMenu={setDisplayRestaurantsOrMenu}/>
     </div>
   );
 }
