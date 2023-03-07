@@ -1,0 +1,10 @@
+.changeRestaurantButton {
+    &.listRestaurants {
+        display: none;
+    }
+
+    &.menuRestaurant {
+        display: block;
+    }    
+}
+

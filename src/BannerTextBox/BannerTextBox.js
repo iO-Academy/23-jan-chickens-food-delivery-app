@@ -9,7 +9,6 @@ const BannerTextBox = (props) => {
 
 
     useEffect(() => {
-        // console.log(props.restaurantDetails.restaurant)
         if (props.restaurantDetails) {
             setRestaurantName(props.restaurantDetails.restaurant)
         }
