@@ -23,9 +23,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # generated css and css.map files
-.sass-cache/
-*.css.map
-*.sass.map
-*.scss.map
-
 src/**/*.css

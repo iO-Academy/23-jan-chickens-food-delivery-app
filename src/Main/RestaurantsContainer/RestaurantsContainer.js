@@ -8,7 +8,7 @@ const RestaurantsContainer = () => {
     useEffect(() => {
         fetch('http://localhost:8080/restaurants')
             .then(response => {
-                return (response.json())
+                return response.json()
             }).then((data) => {
                 setRestaurants(data)
             })
