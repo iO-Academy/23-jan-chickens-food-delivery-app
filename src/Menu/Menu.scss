@@ -9,3 +9,51 @@
     }
     
 }
+
+.foodItemCard {
+    border: solid 2px grey;
+    text-align: left;
+}
+
+.foodItemCard {
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 5px;
+        padding: 1px 2px;
+        margin: 5px;
+    }
+
+    p {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .caloriesTag {
+        background-color: aqua;
+        color: white;
+    }
+
+    .tagContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .typeTag {
+        background-color: blue;
+        color: white;
+    }
+
+    .sideTag {
+        background-color: gold;
+    }
+}
+
+

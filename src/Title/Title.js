@@ -6,8 +6,7 @@ const Title = (props) => {
     // will need to add all of this to existing Title component
 
     const [restaurantName, setRestaurantName] = useState(null)
-
-
+    
     useEffect(() => {
         if (props.restaurantDetails) {
             setRestaurantName(props.restaurantDetails.restaurant)

@@ -20,7 +20,8 @@ const Main = (props) => {
                 displayRestaurantsOrMenu={props.displayRestaurantsOrMenu}
                 setDisplayRestaurantsOrMenu={props.setDisplayRestaurantsOrMenu} />  
             <Menu displayRestaurantsOrMenu={props.displayRestaurantsOrMenu}
-                setDisplayRestaurantsOrMenu={props.setDisplayRestaurantsOrMenu} />
+                setDisplayRestaurantsOrMenu={props.setDisplayRestaurantsOrMenu} 
+                restaurantDetails={restaurantDetails}/>
         </div>
     )
 }
