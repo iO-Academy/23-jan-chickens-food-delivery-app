@@ -3,11 +3,12 @@ import './Navbar.scss'
 const Navbar = (props) => {
 
     function handleChangeRestaurant() {
-        props.setPage('listRestaurants')
+        props.setDisplayRestaurantsOrMenu('listRestaurants')
     }
 
     return (
-        <button className={`changeRestaurantButton ${props.page}`} onClick={handleChangeRestaurant}>Change Restaurant</button>
+        <button className={`changeRestaurantButton ${props.displayRestaurantsOrMenu}`} 
+        onClick={handleChangeRestaurant}>Change Restaurant</button>
     )
 
 }

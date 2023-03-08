@@ -9,7 +9,7 @@ const Restaurants = (props) => {
             .then(data => {
                 props.setRestaurantDetails(data)
             })
-        props.setPage('menuRestaurant')
+        props.setDisplayRestaurantsOrMenu('menuRestaurant')
     }
 
     return (
