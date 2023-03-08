@@ -1,5 +1,5 @@
 import './App.scss'
-import RestaurantsContainer from '../Main/RestaurantsContainer/RestaurantsContainer'
+import RestaurantsContainer from '../RestaurantsContainer/RestaurantsContainer'
 
 function App() {
   return (
