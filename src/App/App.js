@@ -4,6 +4,8 @@ import Navbar from '../Navbar/Navbar'
 import {useState} from 'react'
 
 function App() {
+  // will have to merge with story 1 and make sure it's consistent 
+  // will have to declare new state variable
   const [displayRestaurantsOrMenu, setDisplayRestaurantsOrMenu] = useState('listRestaurants')
   return (
     <div className="App">
