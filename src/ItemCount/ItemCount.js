@@ -12,7 +12,16 @@
 
 const countItems = () => {
 
-    const orderVariable [orderVariable, setOrderVariable] = useState([{}]);
+    // const orderVariable [orderVariable, setOrderVariable] = useState([{}]);
+
+    let orderVariable = menu.foodItems.map((item) => {
+        let orderItem = {}
+        orderItem.name = item.foodName
+        orderItem.price = item.price
+        orderItem.qty = 0
+    })
+
+    const 
 
     const handleClick = () => {
         setOrderVariable(
