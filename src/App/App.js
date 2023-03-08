@@ -1,12 +1,12 @@
 import './App.scss'
-import RestaurantsContainer from '../RestaurantsContainer/RestaurantsContainer'
+import Main from '../Main/Main.js'
 
 function App() {
   return (
     <div className="App">
-      <RestaurantsContainer />
+      <Main />
     </div>
   )
 }
 
-export default App;
+export default App
