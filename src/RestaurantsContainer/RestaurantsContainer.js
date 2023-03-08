@@ -1,6 +1,6 @@
-import './Restaurants.scss'
+import './RestaurantsContainer.scss'
 
-const Restaurants = (props) => {
+const RestaurantsContainer = (props) => {
 
     // need to add all of this into existing Restaurant component
     function handleRestaurantChoice(event) {
@@ -17,9 +17,10 @@ const Restaurants = (props) => {
     return (
         <div className={`restaurants ${props.displayRestaurantsOrMenu}`}>
             {/* make sure all buttons have this format (data-attribute and onClick function) */}
+            {/* replace whole div with Story 1 - keep classNames resaurants and props*/}
             <button data-restaurant-id="1" onClick={handleRestaurantChoice}>Wednys</button>
         </div>
     )
 }
 
-export default Restaurants
+export default RestaurantsContainer

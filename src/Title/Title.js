@@ -17,8 +17,8 @@ const Title = (props) => {
 
     return (
         <div>
-            {/* this will have to be replace with however the title has been formatted in story 1 */}
-            <p className={`titleSplashPage ${props.displayRestaurantsOrMenu}`}>Title placeholder</p>
+            {/* this will have to be replace with however the title has been formatted in story 1 - will include align-middle */}
+            <h1 className={`banner-title ${props.displayRestaurantsOrMenu}`}>Title placeholder</h1>
             <p className={`titleRestaurantName ${props.displayRestaurantsOrMenu}`}>{restaurantName ?? ''}</p>
 
         </div>
