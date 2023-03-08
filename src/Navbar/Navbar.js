@@ -8,8 +8,11 @@ const Navbar = (props) => {
     }
 
     return (
-        <button className={`changeRestaurantButton ${props.displayRestaurantsOrMenu}`} 
-        onClick={handleChangeRestaurant}>Change Restaurant</button>
+        <div className='navbar'>
+            <p>Logo placeholder</p>
+            <button className={`changeRestaurantButton ${props.displayRestaurantsOrMenu}`}
+                onClick={handleChangeRestaurant}>{"<< Change Restaurant"}</button>
+        </div>
     )
 
 }
