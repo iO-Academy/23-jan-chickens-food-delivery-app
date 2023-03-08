@@ -10,7 +10,7 @@ function Main() {
       <Navbar />
       <div style={{ backgroundImage: "url('" + burgerImage + "')" }} className="burger-image m-md-3">
         <div className="d-flex flex-row justify-content-center align-items-center h-100 m-3">
-          <div className="semi-transparent bg-light flex-row justify-content-center align-items-center d-flex m-0 title-box-width p-3">
+          <div className="bg-light flex-row justify-content-center align-items-center d-flex m-0 title-box p-3">
             <Title />
           </div>
         </div>
