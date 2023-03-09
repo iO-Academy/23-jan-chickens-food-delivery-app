@@ -21,21 +21,20 @@ const RestaurantsContainer = (props) => {
             .then(data => {
                 props.setRestaurantDetails(data)
             })
-        props.setDisplayRestaurantsOrMenu('menuRestaurant')
+        props.setDisplayRestaurantsOrMenu('show-menu')
     }
 
     return (
-        <div className={`container-fluid restaurantsContainer ${props.displayRestaurantsOrMenu}`}>
+        <div className={`container-fluid restaurants-container ${props.displayRestaurantsOrMenu}`}>
             <div className="row">
                 {restaurants?.map(restaurant =>
                     <div key={restaurant.id} className="col-sm-12 col-md-6 col-lg-4 col-xl-3 py-2">
-                        <button className="restaurantButton btn btn-outline-primary btn-lg py-4 w-100" 
+                        <button className="restaurant-button btn btn-outline-primary btn-lg py-4 w-100" 
                                 data-restaurant-id={restaurant.id} onClick={handleRestaurantChoice}>
                             {restaurant.name}
                         </button>
                     </div>
-                ) ??
-                    <p>Loading...</p>
+                ) ?? <p>Loading...</p>
                 }
             </div>
         </div>

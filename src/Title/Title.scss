@@ -5,22 +5,22 @@
     color: $primary;
 }
 
-.titleSplashPage, .catchPhrase{
-    &.listRestaurants {
+.landing-page-title, .catch-phrase{
+    &.show-restaurants {
         display: block;
     }
 
-    &.menuRestaurant {
+    &.show-menu {
         display: none;
     }    
 }
 
-.titleRestaurantName {
-    &.listRestaurants {
+.title-restaurant-name {
+    &.show-restaurants {
         display: none;
     }
 
-    &.menuRestaurant {
+    &.show-menu {
         display: block;
     }    
 }

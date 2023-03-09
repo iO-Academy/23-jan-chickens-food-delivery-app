@@ -1,11 +1,8 @@
 .menu {
-
-    &.listRestaurants {
+    &.show-restaurants {
         display: none;
     }
-
-    &.menuRestaurant {
+    &.show-menu {
         display: block;
-    }
-    
+    }   
 }

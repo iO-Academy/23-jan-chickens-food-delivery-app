@@ -1,13 +1,13 @@
-.restaurantsContainer {
-    &.listRestaurants {
+.restaurants-container {
+    &.show-restaurants {
         display: block;
     }
 
-    &.menuRestaurant {
+    &.show-menu {
         display: none;
     }
 }   
-.restaurantButton {
+.restaurant-button {
     color: #000000;
     border-color: #58bccc;
     border-radius: 4px;

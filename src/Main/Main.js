@@ -8,7 +8,7 @@ import Title from '../Title/Title'
 
 const Main = () => {
 
-    const [displayRestaurantsOrMenu, setDisplayRestaurantsOrMenu] = useState('listRestaurants')
+    const [displayRestaurantsOrMenu, setDisplayRestaurantsOrMenu] = useState('show-restaurants')
     const [restaurantDetails, setRestaurantDetails] = useState(null)
 
     return (
@@ -19,17 +19,14 @@ const Main = () => {
                 <div className="d-flex flex-row justify-content-center align-items-center h-100 m-3">
                     <div className="bg-light flex-row justify-content-center align-items-center d-flex m-0 title-box p-3">
                         <Title displayRestaurantsOrMenu={displayRestaurantsOrMenu} 
-                            setDisplayRestaurantsOrMenu={setDisplayRestaurantsOrMenu} 
                             restaurantDetails={restaurantDetails} />
                     </div>
                 </div>
             </div>
-            <RestaurantsContainer restaurantDetails={restaurantDetails} 
-                setRestaurantDetails={setRestaurantDetails}
+            <RestaurantsContainer setRestaurantDetails={setRestaurantDetails}
                 displayRestaurantsOrMenu={displayRestaurantsOrMenu}
                 setDisplayRestaurantsOrMenu={setDisplayRestaurantsOrMenu} />
-            <Menu displayRestaurantsOrMenu={displayRestaurantsOrMenu}
-                setDisplayRestaurantsOrMenu={setDisplayRestaurantsOrMenu} />
+            <Menu displayRestaurantsOrMenu={displayRestaurantsOrMenu} />
             <footer className="m-3 p-3 border-top footer text-start fw-semibold">
                 © Copyright iO Academy 2023
             </footer>
