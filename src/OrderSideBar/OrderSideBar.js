@@ -30,6 +30,9 @@ const OrderSideBar = (props) => {
                             }
                             )}
                         </div>
+                        <div>
+                            <button class="order-button btn btn-success">Place Order</button>
+                        </div>
                     </div>
                 </div>
             </div>
