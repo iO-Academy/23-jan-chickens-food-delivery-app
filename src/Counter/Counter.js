@@ -1,49 +1,39 @@
 //import
 import {useState} from 'react'
 
-const Counter = () => {
-    let itemsArrayInitialStart = menu.foodItems.map((item) => {
-        let orderItem = {}
-        orderItem.name = item.foodName
-        orderItem.price = item.price
-        orderItem.qty = 0
-    })
+const Counter = (props) => {
 
-    const [orderVariable, setOrderVariable] = useState({items: [], total: 0});
-
-    setOrderVariable(orderVariable.items = itemsArrayInitialStart)
-
-
-    console.log(orderVariable)
-
-    const handleClickIncrement = (indexOfItem) => {
-        setOrderVariable((indexOfItem) => {
-            orderVariable.map((item, index) => {
-                if(index == indexOfItem) {
+    const handleClickIncrement = () => {
+        props.setOrder(props.createOrder(
+            props.order.items.map((item, index) => {
+                if(index == props.indexOfItem) {
                     return {...item, qty: item.qty+1}
                 } else {
                     return item    
                 }
             })
-        })
+        ))
     }
-    function handleClickDecrement(indexOfItem) {
-       setOrderVariable((indexOfItem) => {
-        orderVariable.map((item, index) => {
-            if(item.qty >= 1) {
-                if(index == indexOfItem) {
-                    return {...item, qty: item.qty-1}
-                } else {
-                return item    
+    const handleClickDecrement = () => {
+        props.setOrder(props.createOrder(
+            props.order.items.map((item, index) => {
+                if(item.qty >= 1) {
+                    if(index == props.indexOfItem) {
+                        return {...item, qty: item.qty-1}
+                    } else {
+                        return item    
+                    }
                 }
-            }
-        })})
-    } 
+                return item
+            })
+        ))
+    }
+ 
     return (
         <div>
             <button className="increment" onClick={handleClickIncrement}>+</button>
-            <span className="itemQuantity">{TBC.qty}</span>
-            <button className="decrement" onClick={() => handleClickDecrement(TBCITEMINDEX)}>-</button>
+            <span className="itemQuantity">{props.quantity}</span>
+            <button className="decrement" onClick={handleClickDecrement}>-</button>
         </div>
     )
 }

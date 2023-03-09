@@ -1,5 +1,6 @@
 import './App.scss';
 import Counter from '../Counter/Counter';
+import {useState, useEffect} from 'react'; 
 
 function App() {
 
@@ -29,16 +30,29 @@ const orderItems = menu.foodItems.map((item) => {
 })
 
 const createOrder = (orderItems) => {
-  return {items: orderItems, total: 0}
+  const order = {items: orderItems, total: 0}
+
+  return order
 }
 
 const [order, setOrder] = useState(createOrder(orderItems))
 
-
-
+  useEffect(() => {
+    console.log(order)
+  }, [order])
   return (
     <div className="App">
-      {order.map(orderItem)}
+      {order.items.map((orderItem, indexOfItem) => 
+      <div> {orderItem.name}
+      <Counter order={order} setOrder={setOrder} createOrder={createOrder} indexOfItem={indexOfItem} quantity={orderItem.qty}/>
+      </div>)}
+      {order.items.map((orderItem, indexOfItem) => 
+      <div> {orderItem.name}
+      <Counter order={order} setOrder={setOrder} createOrder={createOrder} indexOfItem={indexOfItem} quantity={orderItem.qty}/>
+      </div>)}
+      
+      
+      
     </div>
   );
 }
