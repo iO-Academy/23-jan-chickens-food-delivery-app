@@ -12,3 +12,13 @@
     max-height: 400px;
     height: 60vw;
 }
+
+@media screen and (max-width: 400px) {
+    .banner {
+        background-size: cover;
+        height: auto;
+    }
+    .title-box {
+        height: auto;
+    }
+}
