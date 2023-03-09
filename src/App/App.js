@@ -1,10 +1,12 @@
-import './App.scss';
+import './App.scss'
+import Main from '../Main/Main'
 
-function App() {
+function App() { 
   return (
     <div className="App">
+      <Main />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
