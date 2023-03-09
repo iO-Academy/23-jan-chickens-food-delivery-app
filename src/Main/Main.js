@@ -27,7 +27,7 @@ function Main() {
       {
         name: "Smallest Mac",
         price: 14.49,
-        qty: 1
+        qty: 0
       },
       {
         name: "Tiniest Mac",

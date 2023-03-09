@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 
 const OrderSideBar = (props) => {
-    
+
     return (
         <div className="container-fluid">
             <div className="row px-3">
@@ -15,19 +15,20 @@ const OrderSideBar = (props) => {
                             <h3 className="order-heading ps-1 fs-5">Order</h3>
                         </div>
                         <div className="order-items text-start container">
-                            {props.order.items.filter((item) =>
+                            {props.order.items.map((item, index) => {
+                                return { ...item, index: index }
+                            }).filter((item) =>
                                 item.qty > 0
-                            )
-                                .map((item, index) => {
-                                    return (
-                                        // the span below is a temporary placeholder for the counter component
-                                        <div key={index} className="row">
-                                            <p className="fw-bold col-7 ps-3">{item.name}</p>
-                                            <span className="d-inline text-end col-5"> + {item.qty} - </span> 
-                                        </div>
-                                    )
-                                }
-                                )}
+                            ).map((item, index) => {
+                                return (
+                                    // the span below is a temporary placeholder for the counter component
+                                    <div key={index} className="row">
+                                        <p className="fw-bold col-7 ps-3">{item.name}</p>
+                                        <span className="d-inline text-end col-5"> + {item.qty} - </span>
+                                    </div>
+                                )
+                            }
+                            )}
                         </div>
                     </div>
                 </div>
