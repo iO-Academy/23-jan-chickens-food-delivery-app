@@ -1,5 +1,4 @@
-.restaurants {
-
+.restaurantsContainer {
     &.listRestaurants {
         display: block;
     }
@@ -7,5 +6,11 @@
     &.menuRestaurant {
         display: none;
     }
-    
+}   
+.restaurantButton {
+    color: #000000;
+    border-color: #58bccc;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 30px;
 }

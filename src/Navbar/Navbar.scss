@@ -1,10 +1,13 @@
+@import "../_variables.scss";
+
+.brand-accent {
+    color: $primary;
+}
 .changeRestaurantButton {
     &.listRestaurants {
         display: none;
     }
-
     &.menuRestaurant {
         display: block;
     }    
 }
-

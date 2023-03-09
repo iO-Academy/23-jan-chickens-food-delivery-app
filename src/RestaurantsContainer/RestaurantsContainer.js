@@ -1,8 +1,18 @@
+import { useEffect, useState } from 'react'
 import './RestaurantsContainer.scss'
 
 const RestaurantsContainer = (props) => {
 
-    // need to add all of this into existing Restaurant component
+    const [restaurants, setRestaurants] = useState(null)    
+    useEffect(() => {
+        fetch('http://localhost:8080/restaurants')
+            .then(response => {
+                return response.json()
+            }).then((data) => {
+                setRestaurants(data)
+            })
+    }, [])
+
     function handleRestaurantChoice(event) {
         let id = event.target.getAttribute('data-restaurant-id')
         let url = "http://localhost:8080/restaurants/" + id
@@ -15,9 +25,19 @@ const RestaurantsContainer = (props) => {
     }
 
     return (
-        <div className={`restaurants ${props.displayRestaurantsOrMenu}`}>
-            {/* make sure all buttons have this format (data-attribute and onClick function) */}
-            <button data-restaurant-id="1" onClick={handleRestaurantChoice}>Wednys</button>
+        <div className={`container-fluid restaurantsContainer ${props.displayRestaurantsOrMenu}`}>
+            <div className="row">
+                {restaurants?.map(restaurant =>
+                    <div key={restaurant.id} className="col-sm-12 col-md-6 col-lg-4 col-xl-3 py-2">
+                        <button className="restaurantButton btn btn-outline-primary btn-lg py-4 w-100" 
+                                data-restaurant-id={restaurant.id} onClick={handleRestaurantChoice}>
+                            {restaurant.name}
+                        </button>
+                    </div>
+                ) ??
+                    <p>Loading...</p>
+                }
+            </div>
         </div>
     )
 }
