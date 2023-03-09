@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import './Menu.scss'
 
 const Menu = (props) => {
@@ -19,7 +18,7 @@ const Menu = (props) => {
                             </div>
                         </div>
                     </div>
-                ) ?? <p>Loading</p>}
+                ) ?? <p>Loading...</p>}
             </div>
         </div>
 
