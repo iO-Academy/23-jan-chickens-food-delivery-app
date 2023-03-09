@@ -3,38 +3,7 @@ import { useState } from 'react'
 
 
 const OrderSideBar = (props) => {
-    // this object is a placeholder for the order object. This will be immpo
-    const order = {
-        items: [
-            {
-                name: "Big Mac",
-                price: 12.49,
-                qty: 1
-            },
-            {
-                name: "Bigger Mac",
-                price: 13.49,
-                qty: 1
-            },
-            {
-                name: "Biggest Mac",
-                price: 14.49,
-                qty: 1
-            },
-            {
-                name: "Smallest Mac",
-                price: 14.49,
-                qty: 1
-            },
-            {
-                name: "Tiniest Mac",
-                price: 14.49,
-                qty: 1
-            }
-        ],
-        total: 124.45
-    }
-
+    
     return (
         <div className="container-fluid">
             <div className="row px-3">
@@ -46,7 +15,7 @@ const OrderSideBar = (props) => {
                             <h3 className="order-heading ps-1 fs-5">Order</h3>
                         </div>
                         <div className="order-items text-start container">
-                            {order.items.filter((item) =>
+                            {props.order.items.filter((item) =>
                                 item.qty > 0
                             )
                                 .map((item, index) => {
