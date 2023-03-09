@@ -11,6 +11,11 @@ $sideTagColor: #f7c244;
     } 
 }
 
+.scroll-container {
+    max-height: 800px;
+    overflow: scroll;
+}
+
 .food-item-card {
     border: solid 2px #898c8e;
     text-align: left;
@@ -47,5 +52,14 @@ $sideTagColor: #f7c244;
     }
     .side-tag {
         background-color: $sideTagColor;
+    }
+}
+
+@media screen and (max-width:470px) {
+    .scroll-container {
+        max-height: 400px;
+    }
+    .order-box {
+        padding :0;
     }
 }

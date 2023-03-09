@@ -20,8 +20,8 @@ const OrderSideBar = (props) => {
                     return (
                         // the span below is a temporary placeholder for the counter component
                         <div key={index} className="row">
-                            <p className="fw-bold col-6 ps-3">{item.name}</p>
-                            <span className="d-inline text-end col-6">
+                            <p className="fw-bold col-6 ps-3 m-0 py-3">{item.name}</p>
+                            <span className="d-inline text-end col-6 text-nowrap">
                                 <Counter order={props.order} setOrder={props.setOrder} createOrder={props.createOrder} indexOfItem={item.index} quantity={item.qty}/>
                             </span>
                         </div>
