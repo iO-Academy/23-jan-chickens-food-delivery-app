@@ -34,7 +34,7 @@ const Menu = (props) => {
                     </div>
                 </div>
                 <div className="col-sm-12 col-lg-3 col-xl-2">
-                    <OrderSideBar order={props.order} setOrder={props.setOrder} />
+                    <OrderSideBar order={props.order} setOrder={props.setOrder} createOrder={props.createOrder} />
                 </div>
             </div>
         </div>

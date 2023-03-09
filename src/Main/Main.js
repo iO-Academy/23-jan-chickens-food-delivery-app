@@ -23,7 +23,7 @@ const Main = () => {
       let orderItem = {}
       orderItem.name = item.foodName
       orderItem.price = item.price
-      orderItem.qty = 0
+      orderItem.qty = 1
       return orderItem
     })))
 
@@ -45,7 +45,7 @@ const Main = () => {
       <RestaurantsContainer setRestaurantDetails={setRestaurantDetails}
         displayRestaurantsOrMenu={displayRestaurantsOrMenu}
         setDisplayRestaurantsOrMenu={setDisplayRestaurantsOrMenu} />
-      <Menu displayRestaurantsOrMenu={displayRestaurantsOrMenu} restaurantDetails={restaurantDetails} order={order} setOrde={setOrder} />
+      <Menu displayRestaurantsOrMenu={displayRestaurantsOrMenu} restaurantDetails={restaurantDetails} createOrder={createOrder} order={order} setOrder={setOrder} />
       <footer className="m-3 p-3 border-top footer text-start fw-semibold">
         © Copyright iO Academy 2023
       </footer>

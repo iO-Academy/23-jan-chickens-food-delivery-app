@@ -1,5 +1,6 @@
 import './OrderSideBar.scss'
 import { useState } from 'react'
+import Counter from '../Counter/Counter'
 
 
 const OrderSideBar = (props) => {
@@ -20,7 +21,9 @@ const OrderSideBar = (props) => {
                         // the span below is a temporary placeholder for the counter component
                         <div key={index} className="row">
                             <p className="fw-bold col-8 ps-3">{item.name}</p>
-                            <span className="d-inline text-end col-4"> + {item.qty} - </span>
+                            <span className="d-inline text-end col-4">
+                                <Counter order={props.order} setOrder={props.setOrder} createOrder={props.createOrder} indexOfItem={item.index} quantity={item.qty}/>
+                            </span>
                         </div>
                     )
                 }
