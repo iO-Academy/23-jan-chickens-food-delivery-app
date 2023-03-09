@@ -58,6 +58,9 @@ const OrderSideBar = (props) => {
                         </div>
                         <button className="btn btn-success" onClick={handleOrderClick}>Place Order</button>
                         </div>
+                        <div>
+                            <button class="order-button btn btn-success">Place Order</button>
+                        </div>
                     </div>
                 </div>
             </div>
