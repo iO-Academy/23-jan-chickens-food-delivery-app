@@ -35,9 +35,10 @@ function Main() {
         qty: 1
       }
     ],
-    total: 124.45
+    total: 100
   })
 
+  
 
   return (
     <main>
