@@ -1,6 +1,4 @@
-$calorieTagColor: #49a0b5;
-$typeTagColor: #2e7cf6;
-$sideTagColor: #f7c244;
+@import "../_variables.scss";
 
 .menu {
     &.show-restaurants {
@@ -12,7 +10,7 @@ $sideTagColor: #f7c244;
 }
 
 .food-item-card {
-    border: solid 2px #898c8e;
+    border: solid 2px $borderColor;
     text-align: left;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
 
@@ -20,19 +18,19 @@ $sideTagColor: #f7c244;
         font-size: 22px;
         font-weight: bold;
     }
-    h3 {
+    .calories-tag, .type-tag, .side-tag {
         font-size: 16px;
         font-weight: bold;
         border-radius: 5px;
         padding: 1px 2px;
         margin: 5px 0;
     }
-    p {
+    .price-tag {
         font-size: 18px;
         font-weight: bold;
     }
     .calories-tag {
-        background-color: $calorieTagColor;
+        background-color: $primaryColor;
         color: #ffffff;
     }
     .tag-container {
@@ -42,10 +40,10 @@ $sideTagColor: #f7c244;
         align-items: flex-start;
     }
     .type-tag {
-        background-color: $typeTagColor;
+        background-color: $secondaryColor;
         color: #ffffff;
     }
     .side-tag {
-        background-color: $sideTagColor;
+        background-color: $accentColor;
     }
 }
