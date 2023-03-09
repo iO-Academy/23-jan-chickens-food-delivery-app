@@ -2,15 +2,17 @@
 import {useState} from 'react'
 
 const Counter = () => {
-    let orderVariableInitialState = menu.foodItems.map((item) => {
+    let itemsArrayInitialStart = menu.foodItems.map((item) => {
         let orderItem = {}
         orderItem.name = item.foodName
         orderItem.price = item.price
         orderItem.qty = 0
     })
-    console.log(orderVariableInitialState)
 
-    const [orderVariable, setOrderVariable] = useState(orderVariableInitialState);
+    const [orderVariable, setOrderVariable] = useState({items: [], total: 0});
+
+    setOrderVariable(orderVariable.items = itemsArrayInitialStart)
+
 
     console.log(orderVariable)
 
