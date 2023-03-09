@@ -35,7 +35,7 @@ function Main() {
         qty: 1
       }
     ],
-    total: 0
+    total: 10.01
   })
 
   

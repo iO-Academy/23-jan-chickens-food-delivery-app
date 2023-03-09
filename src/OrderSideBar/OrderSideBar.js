@@ -3,6 +3,17 @@ import { useState } from 'react'
 
 
 const OrderSideBar = (props) => {
+    const handleOrderClick = ()=>{
+        fetch('http://localhost:8080/orders', {
+            method: 'POST',
+            body: JSON.stringify(props.order),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        console.log('success!')
+    }
+
 
     return (
         <div className="container-fluid">
@@ -45,7 +56,7 @@ const OrderSideBar = (props) => {
                             <p className="col-6 ps-3 fw-bold mb-3">Total:</p>
                             <span className="d-inline text-end col-6 fw-bold">£{props.order.total+0.99+1.5}</span>
                         </div>
-                        <button className="btn btn-success">Place Order</button>
+                        <button className="btn btn-success" onClick={handleOrderClick}>Place Order</button>
                         </div>
                     </div>
                 </div>
