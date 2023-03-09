@@ -50,6 +50,7 @@ function Main() {
         </div>
       </div>
       {/* <RestaurantsContainer /> */}
+      {/*<Menu /> */}
       <OrderSideBar order={order} setOrder={setOrder}/>
       <footer className="m-3 p-3 border-top footer text-start fw-semibold">
         © Copyright iO Academy 2023
