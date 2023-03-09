@@ -18,7 +18,7 @@ const Menu = (props) => {
                     <div className='row justify-content-center'>
                         {foodItems?.map((foodItem, index) =>
                             <div className="p-2 col-sm-12 col-md-4 col-lg-3 col-xl-2" key={index}>
-                                <div className="card  food-item-card">
+                                <div className="card food-item-card">
                                     <div className="card-body" >
                                         <h2 className="card-title">{foodItem.foodName}</h2>
                                         <div className="tag-container">
