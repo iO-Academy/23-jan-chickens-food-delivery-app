@@ -7,7 +7,6 @@ import RestaurantsContainer from '../RestaurantsContainer/RestaurantsContainer'
 import Title from '../Title/Title'
 
 const Main = () => {
-
     const [displayRestaurantsOrMenu, setDisplayRestaurantsOrMenu] = useState('show-restaurants')
     const [restaurantDetails, setRestaurantDetails] = useState(null)
 

@@ -6,7 +6,6 @@ function Navbar(props) {
     }
 
     return (
-
         <nav className="navbar border-bottom shadow-sm px-4 flex-column flex-md-row">
             <div>
                 <a href="#" className="navbar-brand fw-bold m-0">
