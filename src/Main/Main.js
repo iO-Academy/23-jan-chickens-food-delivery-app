@@ -35,7 +35,7 @@ function Main() {
         qty: 1
       }
     ],
-    total: 100
+    total: 0
   })
 
   
