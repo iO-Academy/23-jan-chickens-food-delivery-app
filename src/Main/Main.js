@@ -5,7 +5,7 @@ import Menu from '../Menu/Menu'
 import Navbar from '../Navbar/Navbar'
 import RestaurantsContainer from '../RestaurantsContainer/RestaurantsContainer'
 import Title from '../Title/Title'
-import OrderSideBar from '../OrderSideBar/OrderSideBar'
+
 const Main = () => {
     const [displayRestaurantsOrMenu, setDisplayRestaurantsOrMenu] = useState('show-restaurants')
     const [restaurantDetails, setRestaurantDetails] = useState(null)
@@ -54,8 +54,7 @@ const Main = () => {
             <RestaurantsContainer setRestaurantDetails={setRestaurantDetails}
                 displayRestaurantsOrMenu={displayRestaurantsOrMenu}
                 setDisplayRestaurantsOrMenu={setDisplayRestaurantsOrMenu} />
-            <Menu displayRestaurantsOrMenu={displayRestaurantsOrMenu} restaurantDetails={restaurantDetails} />
-            <OrderSideBar order={order} setOrder={setOrder}/>
+            <Menu displayRestaurantsOrMenu={displayRestaurantsOrMenu} restaurantDetails={restaurantDetails} order={order} setOrde={setOrder} />
             <footer className="m-3 p-3 border-top footer text-start fw-semibold">
                 © Copyright iO Academy 2023
             </footer>
