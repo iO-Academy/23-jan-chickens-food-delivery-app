@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import './RestaurantsContainer.scss'
 
 const RestaurantsContainer = (props) => {
-
     const [restaurants, setRestaurants] = useState(null)    
     useEffect(() => {
         fetch('http://localhost:8080/restaurants')
@@ -22,6 +21,7 @@ const RestaurantsContainer = (props) => {
                 props.setRestaurantDetails(data)
             })
         props.setDisplayRestaurantsOrMenu('show-menu')
+       
     }
 
     return (

@@ -13,7 +13,7 @@ function Navbar(props) {
                     <span>Delivery</span>
                 </a>
             </div>
-            <button className={`changeRestaurantButton ${props.displayRestaurantsOrMenu}`} onClick={handleChangeRestaurant}>
+            <button className={`change-restaurant-button ${props.displayRestaurantsOrMenu}`} onClick={handleChangeRestaurant}>
                 {"<< Change Restaurant"} 
             </button>
         </nav>

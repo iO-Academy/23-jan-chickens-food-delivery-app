@@ -7,7 +7,6 @@ import RestaurantsContainer from '../RestaurantsContainer/RestaurantsContainer'
 import Title from '../Title/Title'
 
 const Main = () => {
-
     const [displayRestaurantsOrMenu, setDisplayRestaurantsOrMenu] = useState('show-restaurants')
     const [restaurantDetails, setRestaurantDetails] = useState(null)
 
@@ -26,7 +25,7 @@ const Main = () => {
             <RestaurantsContainer setRestaurantDetails={setRestaurantDetails}
                 displayRestaurantsOrMenu={displayRestaurantsOrMenu}
                 setDisplayRestaurantsOrMenu={setDisplayRestaurantsOrMenu} />
-            <Menu displayRestaurantsOrMenu={displayRestaurantsOrMenu} />
+            <Menu displayRestaurantsOrMenu={displayRestaurantsOrMenu} restaurantDetails={restaurantDetails} />
             <footer className="m-3 p-3 border-top footer text-start fw-semibold">
                 © Copyright iO Academy 2023
             </footer>
