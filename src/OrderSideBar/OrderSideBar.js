@@ -29,6 +29,22 @@ const OrderSideBar = (props) => {
                                 )
                             }
                             )}
+                        <div className="row">
+                            <p className="col-6 ps-3 text-nowrap mb-1">Sub-total:</p>
+                            <span className="d-inline text-end col-6">£{props.order.total}</span>
+                        </div>
+                        <div className="row">
+                            <p className="col-6 ps-3 text-nowrap mb-1">Delivery fee:</p>
+                            <span className="d-inline text-end col-6 text-nowrap">£0.99</span>
+                        </div>
+                        <div className="row">
+                            <p className="col-6 ps-3 text-nowrap mb-1">Service fee:</p>
+                            <span className="d-inline text-end col-6">£1.50</span>
+                        </div>
+                        <div className="row">
+                            <p className="col-6 ps-3 fw-bold mb-1">Total:</p>
+                            <span className="d-inline text-end col-6">£{props.order.total+0.99+1.5}</span>
+                        </div>
                         </div>
                     </div>
                 </div>
