@@ -2,25 +2,6 @@
 
 .banner-title {
     font-size: 50px;
-    color: $primary;
+    color: $primaryColor;
 }
 
-.landing-page-title, .catch-phrase{
-    &.show-restaurants {
-        display: block;
-    }
-
-    &.show-menu {
-        display: none;
-    }    
-}
-
-.title-restaurant-name {
-    &.show-restaurants {
-        display: none;
-    }
-
-    &.show-menu {
-        display: block;
-    }    
-}

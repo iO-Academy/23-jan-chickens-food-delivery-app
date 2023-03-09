@@ -1,12 +1,12 @@
 @import "../_variables.scss";
 
 .brand-accent {
-    color: $primary;
+    color: $primaryColor;
 }
 .change-restaurant-button {
     border-style: none;
     background-color: #ffffff;  
-    color: #2e7cf6;
+    color: $secondaryColor;
     font-weight: bold;
     margin-right: 8px;
 
