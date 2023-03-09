@@ -43,7 +43,7 @@ const OrderSideBar = (props) => {
                         </div>
                         <div className="row">
                             <p className="col-6 ps-3 fw-bold mb-3">Total:</p>
-                            <span className="d-inline text-end col-6">£{props.order.total+0.99+1.5}</span>
+                            <span className="d-inline text-end col-6 fw-bold">£{props.order.total+0.99+1.5}</span>
                         </div>
                         <button className="btn btn-success">Place Order</button>
                         </div>
