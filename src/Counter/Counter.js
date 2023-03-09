@@ -1,4 +1,5 @@
-//import
+import './Counter.scss'
+
 import {useState} from 'react'
 
 const Counter = (props) => {
@@ -31,9 +32,9 @@ const Counter = (props) => {
  
     return (
         <div>
-            <button className="increment" onClick={handleClickIncrement}>+</button>
+            <button className="btn btn increment" onClick={handleClickIncrement}>+</button>
             <span className="itemQuantity">{props.quantity}</span>
-            <button className="decrement" onClick={handleClickDecrement}>-</button>
+            <button className="btn btn decrement" onClick={handleClickDecrement}>-</button>
         </div>
     )
 }
