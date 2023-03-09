@@ -1,0 +1,24 @@
+.title-box {
+    --bs-bg-opacity: 0.7;
+    max-width: 100%;
+    width: 650px;
+    height: 200px;
+}
+
+.banner {
+    background-size: 100%;
+    background-position: 0% 20%;
+    background-repeat: no-repeat;
+    max-height: 400px;
+    height: 60vw;
+}
+
+@media screen and (max-width: 400px) {
+    .banner {
+        background-size: cover;
+        height: auto;
+    }
+    .title-box {
+        height: auto;
+    }
+}

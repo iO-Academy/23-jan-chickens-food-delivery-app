@@ -1,28 +1,36 @@
 import { useState } from 'react'
-import Title from '../Title/Title'
+import './Main.scss'
+import burgerImage from './burgers.webp'
 import Menu from '../Menu/Menu'
-import Restaurants from '../Restaurants/Restaurants'
+import Navbar from '../Navbar/Navbar'
+import RestaurantsContainer from '../RestaurantsContainer/RestaurantsContainer'
+import Title from '../Title/Title'
 
+const Main = () => {
 
-const Main = (props) => {
-
-     // will have to merge with story 1 and make sure it's consistent 
-    // will need to declare new state variable
+    const [displayRestaurantsOrMenu, setDisplayRestaurantsOrMenu] = useState('show-restaurants')
     const [restaurantDetails, setRestaurantDetails] = useState(null)
 
-    
     return (
-        <div>
-            {/* need to add props to all of the below components */}
-            <Title displayRestaurantsOrMenu={props.displayRestaurantsOrMenu}
-                setDisplayRestaurantsOrMenu={props.setDisplayRestaurantsOrMenu} restaurantDetails={restaurantDetails} />
-            <Restaurants restaurantDetails={props.restaurantDetails} setRestaurantDetails={setRestaurantDetails}
-                displayRestaurantsOrMenu={props.displayRestaurantsOrMenu}
-                setDisplayRestaurantsOrMenu={props.setDisplayRestaurantsOrMenu} />  
-            <Menu displayRestaurantsOrMenu={props.displayRestaurantsOrMenu}
-                setDisplayRestaurantsOrMenu={props.setDisplayRestaurantsOrMenu} 
-                restaurantDetails={restaurantDetails}/>
-        </div>
+        <main>
+            <Navbar displayRestaurantsOrMenu={displayRestaurantsOrMenu}
+                setDisplayRestaurantsOrMenu={setDisplayRestaurantsOrMenu} />
+            <div style={{ backgroundImage: "url('" + burgerImage + "')" }} className="banner m-md-3">
+                <div className="d-flex flex-row justify-content-center align-items-center h-100 m-3">
+                    <div className="bg-light flex-row justify-content-center align-items-center d-flex m-0 title-box p-3">
+                        <Title displayRestaurantsOrMenu={displayRestaurantsOrMenu} 
+                            restaurantDetails={restaurantDetails} />
+                    </div>
+                </div>
+            </div>
+            <RestaurantsContainer setRestaurantDetails={setRestaurantDetails}
+                displayRestaurantsOrMenu={displayRestaurantsOrMenu}
+                setDisplayRestaurantsOrMenu={setDisplayRestaurantsOrMenu} />
+            <Menu displayRestaurantsOrMenu={displayRestaurantsOrMenu} restaurantDetails={restaurantDetails} />
+            <footer className="m-3 p-3 border-top footer text-start fw-semibold">
+                © Copyright iO Academy 2023
+            </footer>
+        </main>
     )
 }
 

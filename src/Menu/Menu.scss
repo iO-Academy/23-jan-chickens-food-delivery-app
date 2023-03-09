@@ -3,24 +3,19 @@ $typeTagColor: #2e7cf6;
 $sideTagColor: #f7c244;
 
 .menu {
-
-    &.listRestaurants {
+    &.show-restaurants {
         display: none;
     }
-
-    &.menuRestaurant {
+    &.show-menu {
         display: block;
     }
     
 }
 
-.foodItemCard {
+.food-item-card {
     border: solid 2px #898c8e;
     text-align: left;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
-}
-
-.foodItemCard {
 
     h2 {
         font-size: 22px;
@@ -40,26 +35,24 @@ $sideTagColor: #f7c244;
         font-weight: bold;
     }
 
-    .caloriesTag {
+    .calories-tag {
         background-color: $calorieTagColor;
         color: #ffffff;
     }
 
-    .tagContainer {
+    .tag-container {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
     }
 
-    .typeTag {
+    .type-tag {
         background-color: $typeTagColor;
         color: #ffffff;
     }
 
-    .sideTag {
+    .side-tag {
         background-color: $sideTagColor;
     }
 }
-
-
