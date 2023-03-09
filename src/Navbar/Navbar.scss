@@ -1,0 +1,26 @@
+@import "../_variables.scss";
+
+.brand-accent {
+    color: $primary;
+}
+.changeRestaurantButton {
+    border-style: none;
+    background-color: #ffffff;  
+    color: #2e7cf6;
+    font-weight: bold;
+    margin-right: 8px;
+
+    &.show-restaurants {
+        display: none;
+    }
+    &.show-menu {
+        display: block;
+    }    
+}
+nav {
+    display: flex;
+    justify-content: space-between;  
+}
+
+
+

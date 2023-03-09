@@ -1,0 +1,8 @@
+.menu {
+    &.show-restaurants {
+        display: none;
+    }
+    &.show-menu {
+        display: block;
+    }   
+}
