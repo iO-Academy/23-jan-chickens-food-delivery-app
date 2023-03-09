@@ -1,6 +1,6 @@
 import './Navbar.scss'
 
-const Navbar = (props) => {
+function Navbar(props) {
 
     // add all of this into existing nav bar component
     function handleChangeRestaurant() {

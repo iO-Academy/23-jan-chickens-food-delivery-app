@@ -1,6 +1,6 @@
-import './Restaurants.scss'
+import './RestaurantsContainer.scss'
 
-const Restaurants = (props) => {
+const RestaurantsContainer = (props) => {
 
     // need to add all of this into existing Restaurant component
     function handleRestaurantChoice(event) {
@@ -22,4 +22,4 @@ const Restaurants = (props) => {
     )
 }
 
-export default Restaurants
+export default RestaurantsContainer

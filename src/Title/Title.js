@@ -7,19 +7,17 @@ const Title = (props) => {
 
     const [restaurantName, setRestaurantName] = useState(null)
 
-
     useEffect(() => {
         if (props.restaurantDetails) {
             setRestaurantName(props.restaurantDetails.restaurant)
         }
     }, [props.restaurantDetails])
 
-
     return (
         <div>
             {/* this will have to be replace with however the title has been formatted in story 1 */}
-            <p className={`titleSplashPage ${props.displayRestaurantsOrMenu}`}>Title placeholder</p>
-            <p className={`titleRestaurantName ${props.displayRestaurantsOrMenu}`}>{restaurantName ?? ''}</p>
+            <h1 className={`titleSplashPage ${props.displayRestaurantsOrMenu}`}>Title placeholder</h1>
+            <h1 className={`titleRestaurantName ${props.displayRestaurantsOrMenu}`}>{restaurantName ?? ''}</h1>
 
         </div>
     )
