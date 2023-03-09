@@ -1,29 +1,11 @@
-$primary: #17A2B8;
-
-body {
-    min-width: 370px;
-}
-
-.title-box-width {
+.title-box {
+    --bs-bg-opacity: 0.7;
     max-width: 100%;
     width: 650px;
     height: 200px;
 }
 
-.banner-title {
-    font-size: 50px;
-}
-
-.custom-text-primary {
-    color: $primary;
-}
-
-.semi-transparent {
-    --bs-bg-opacity: 0.7;
-}
-
-.burger-image {
-    object-fit: cover;
+.banner {
     background-size: 100%;
     background-position: 0% 20%;
     background-repeat: no-repeat;
@@ -31,8 +13,12 @@ body {
     height: 60vw;
 }
 
-@media screen and (max-width: 370px) {
-    .burger-image {
-        height: 225px;
+@media screen and (max-width: 400px) {
+    .banner {
+        background-size: cover;
+        height: auto;
+    }
+    .title-box {
+        height: auto;
     }
 }
