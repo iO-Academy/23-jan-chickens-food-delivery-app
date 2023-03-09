@@ -3,6 +3,7 @@ import burgerImage from './burgers.webp'
 import Navbar from '../Navbar/Navbar'
 import Title from '../Title/Title'
 import RestaurantsContainer from '../RestaurantsContainer/RestaurantsContainer'
+import OrderSideBar from '../OrderSideBar/OrderSideBar'
 
 function Main() {
   return (
@@ -15,7 +16,7 @@ function Main() {
           </div>
         </div>
       </div>
-      <RestaurantsContainer />
+      <OrderSideBar />
       <footer className="m-3 p-3 border-top footer text-start fw-semibold">
         © Copyright iO Academy 2023
       </footer>
