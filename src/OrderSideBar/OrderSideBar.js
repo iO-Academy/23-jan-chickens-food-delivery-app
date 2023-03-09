@@ -3,7 +3,6 @@ import { useState } from 'react'
 
 
 const OrderSideBar = (props) => {
-
     return (
 
         <div className="card-body p-0 bg-light">
@@ -12,7 +11,7 @@ const OrderSideBar = (props) => {
                 <h3 className="order-heading ps-1 fs-5">Order</h3>
             </div>
             <div className="order-items text-start container">
-                {props.order.items.map((item, index) => {
+                {props.order?.items.map((item, index) => {
                     return { ...item, index: index }
                 }).filter((item) =>
                     item.qty > 0
