@@ -46,13 +46,6 @@ const [order, setOrder] = useState(createOrder(orderItems))
       <div> {orderItem.name}
       <Counter order={order} setOrder={setOrder} createOrder={createOrder} indexOfItem={indexOfItem} quantity={orderItem.qty}/>
       </div>)}
-      {order.items.map((orderItem, indexOfItem) => 
-      <div> {orderItem.name}
-      <Counter order={order} setOrder={setOrder} createOrder={createOrder} indexOfItem={indexOfItem} quantity={orderItem.qty}/>
-      </div>)}
-      
-      
-      
     </div>
   );
 }

@@ -31,10 +31,10 @@ const Counter = (props) => {
     }
  
     return (
-        <div>
-            <button className="btn btn increment" onClick={handleClickIncrement}>+</button>
+        <div className="fw-semibold">
+            <button className="btn fw-semibold increment" onClick={handleClickIncrement}>+</button>
             <span className="itemQuantity">{props.quantity}</span>
-            <button className="btn btn decrement" onClick={handleClickDecrement}>-</button>
+            <button className="btn fw-semibold decrement" onClick={handleClickDecrement}>-</button>
         </div>
     )
 }
