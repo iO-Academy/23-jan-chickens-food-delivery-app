@@ -1,7 +1,7 @@
 import './App.scss'
-import Main from '../Main/Main.js'
+import Main from '../Main/Main'
 
-function App() {
+function App() { 
   return (
     <div className="App">
       <Main />

@@ -1,6 +1,16 @@
-.restaurantButton {
+@import "../_variables.scss";
+.restaurants-container {
+    &.show-restaurants {
+        display: block;
+    }
+
+    &.show-menu {
+        display: none;
+    }
+}   
+.restaurant-button {
     color: #000000;
-    border-color: #58bccc;
+    border-color: $primaryColor;
     border-radius: 4px;
     font-weight: 600;
     font-size: 30px;
