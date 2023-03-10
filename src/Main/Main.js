@@ -19,11 +19,11 @@ const Main = () => {
   }
 
   useEffect(() => {
-    setOrder(createOrder(restaurantDetails?.foodItems.map((item) => {
+    setOrder(createOrder(restaurantDetails?.foodItems.map((item, index) => {
       let orderItem = {}
       orderItem.name = item.foodName
       orderItem.price = item.price
-      orderItem.qty = 1
+      orderItem.qty = index < 5 ? 1 : 0
       return orderItem
     })))
 
