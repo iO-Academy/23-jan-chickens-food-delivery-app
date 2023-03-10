@@ -10,48 +10,53 @@ const Main = () => {
   const [displayRestaurantsOrMenu, setDisplayRestaurantsOrMenu] = useState('show-restaurants')
   const [restaurantDetails, setRestaurantDetails] = useState(null)
   const [order, setOrder] = useState(null)
+
+
   const createOrder = (orderItems) => {
-    if(!orderItems) {
+    if (!orderItems) {
       return null
     }
-    const order = { items: orderItems, total: 0 }
-    return order
-  }
+    let total = 0
+    orderItems.forEach(item => total += item.price*item.qty
+    )
+
+  const order = { items: orderItems, total: total }
+  return order
+}
 
 
-  useEffect(() => {
-    setOrder(createOrder(restaurantDetails?.foodItems.map((item) => {
-      let orderItem = {}
-      orderItem.name = item.foodName
-      orderItem.price = item.price
-      orderItem.qty = 1
-      return orderItem
-    })))
+useEffect(() => {
+  setOrder(createOrder(restaurantDetails?.foodItems.map((item) => {
+    let orderItem = {}
+    orderItem.name = item.foodName
+    orderItem.price = item.price
+    orderItem.qty = 1
+    return orderItem
+  })))
 
-  }, [restaurantDetails])
+}, [restaurantDetails])
 
-
-  return (
-    <main>
-      <Navbar displayRestaurantsOrMenu={displayRestaurantsOrMenu}
-        setDisplayRestaurantsOrMenu={setDisplayRestaurantsOrMenu} />
-      <div style={{ backgroundImage: "url('" + burgerImage + "')" }} className="banner m-md-3">
-        <div className="d-flex flex-row justify-content-center align-items-center h-100 m-3">
-          <div className="bg-light flex-row justify-content-center align-items-center d-flex m-0 title-box p-3">
-            <Title displayRestaurantsOrMenu={displayRestaurantsOrMenu}
-              restaurantDetails={restaurantDetails} />
-          </div>
+return (
+  <main>
+    <Navbar displayRestaurantsOrMenu={displayRestaurantsOrMenu}
+      setDisplayRestaurantsOrMenu={setDisplayRestaurantsOrMenu} />
+    <div style={{ backgroundImage: "url('" + burgerImage + "')" }} className="banner m-md-3">
+      <div className="d-flex flex-row justify-content-center align-items-center h-100 m-3">
+        <div className="bg-light flex-row justify-content-center align-items-center d-flex m-0 title-box p-3">
+          <Title displayRestaurantsOrMenu={displayRestaurantsOrMenu}
+            restaurantDetails={restaurantDetails} />
         </div>
       </div>
-      <RestaurantsContainer setRestaurantDetails={setRestaurantDetails}
-        displayRestaurantsOrMenu={displayRestaurantsOrMenu}
-        setDisplayRestaurantsOrMenu={setDisplayRestaurantsOrMenu} />
-      <Menu displayRestaurantsOrMenu={displayRestaurantsOrMenu} restaurantDetails={restaurantDetails} createOrder={createOrder} order={order} setOrder={setOrder} />
-      <footer className="m-3 p-3 border-top footer text-start fw-semibold">
-        © Copyright iO Academy 2023
-      </footer>
-    </main>
-  )
+    </div>
+    <RestaurantsContainer setRestaurantDetails={setRestaurantDetails}
+      displayRestaurantsOrMenu={displayRestaurantsOrMenu}
+      setDisplayRestaurantsOrMenu={setDisplayRestaurantsOrMenu} />
+    <Menu displayRestaurantsOrMenu={displayRestaurantsOrMenu} restaurantDetails={restaurantDetails} createOrder={createOrder} order={order} setOrder={setOrder} />
+    <footer className="m-3 p-3 border-top footer text-start fw-semibold">
+      © Copyright iO Academy 2023
+    </footer>
+  </main>
+)
 }
 
 export default Main
